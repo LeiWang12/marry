@@ -3,33 +3,54 @@
 
 	<head lang="en">
 		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
 		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/frozen.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<script src="js/zepto.min.js"></script>
+		<script src="js/frozen.js"></script>
 		<style>
-			div {
-				width: auto;
-				text-align: center;
-				margin-top: 300px;
-				color: red;
-				font-size: 50px;
-				font-weight: bold;
-			}
-			body{
-				background-image: url(img/lei.jpg) ;
-				background-repeat: no-repeat;
-				background-size: contain;
-			}
+
 		</style>
 	</head>
 
-	<body>
-		<div>Wang Lei and Li Furong's wedding countdown:</div>
-		<canvas id="canvas" style="display:block;margin:0 auto;">
-        当前浏览器不支持Canvas，请更换浏览器后再试
-    </canvas>
+	<body ontouchstart>
+		<header class="ui-header ui-header-positive ui-border-b">
+			<h1>You and Me</h1>
+		</header>
+		<footer class="ui-footer ui-footer-btn">
+			<ul class="ui-tiled ui-border-t">
+				<li data-href="" class="ui-border-r">
+					<div>合影</div>
+				</li>
+				<li data-href="" class="ui-border-r">
+					<div>时光</div>
+				</li>
+				<li data-href="">
+					<div>祝福</div>
+				</li>
+			</ul>
+		</footer>
+		<iframe src="photos.html" height="600px" width="100%" scrolling="no" frameborder="0"></iframe>
+		<!-- /.ui-container-->
 
+		<!--<script src="js/digit.js"></script>
+		<script src="js/countdown.js"></script>-->
+		<script>
+			
+		</script>
+	</body>
+
+	<!--<body style="height: 100%;">
+		<div>Wang Lei and Li Furong's wedding countdown:</div>
+		<canvas id="canvas" style="height: 100%;">
+        	当前浏览器不支持Canvas，请更换浏览器后再试
+    </canvas> 
+		<script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
 		<script src="js/digit.js"></script>
 		<script src="js/countdown.js"></script>
-	</body>
+	</body>-->
 
 </html>
