@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>我和你的故事</title>
+		<link rel="stylesheet" href="css/frozen.css">
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/frozen.js"></script>
+		<script type="text/javascript" src="js/fx.js"></script>
+		<script type="text/javascript" src="js/fx_method.js"></script>
+	</head>
+
+	<body ontouchstart>
+		<!--<header class="ui-header ui-header-positive ui-border-b">
+			<h1>You and Me</h1>
+		</header>-->
+		<footer class="ui-footer ui-footer-btn">
+			<ul class="ui-tiled ui-border-t">
+				<li id="hy" class="ui-border-r">
+					<div>合影</div>
+				</li>
+				<li id="sg" class="ui-border-r">
+					<div>时光</div>
+				</li>
+				<li id="zf">
+					<div>祝福</div>
+				</li>
+			</ul>
+		</footer>
+		<section class="ui-container">
+			<div id="con">
+				<ul class="ui-list ui-list-pure ui-border-tb">
+					<li class="ui-border-t">
+						<p><span>1.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+					<li class="ui-border-t">
+						<p><span>2.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+					<li class="ui-border-t">
+						<p><span>3.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+					<li class="ui-border-t">
+						<p><span>4.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+					<li class="ui-border-t">
+						<p><span>5.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+					<li class="ui-border-t">
+						<p><span>6.wanglei </span><span class="date"> 2月12日</span></p>
+						<h4>芙蓉吃胖了</h4>
+					</li>
+
+				</ul>
+			</div>
+			<section id="form" style="position: absolute;bottom: 56px;width:100%">
+				<div class="demo-item">
+					<div class="demo-block">
+						<section class="ui-input-wrap ui-border-t">
+							<div class="ui-input ui-border-radius">
+								<input type="text" name="" value="" placeholder="我也祝福一个...">
+							</div>
+							<button class="ui-btn">发送</button>
+						</section>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<script>
+			/*前台会议滚动*/
+			(function() {
+				setInterval(function() {
+					var $ul = $("#con ul");
+					var liHeight = $ul.find("li").last().height();
+					$ul.animate({
+						marginTop: liHeight + "px"
+					}, 1000, function() {
+						$ul.find("li").last().prependTo($ul)
+						$ul.find("li").first().hide();
+						$ul.css({
+							marginTop: 0
+						});
+						$ul.find("li").first().fadeIn(1000);
+					});
+				}, 3000);
+			})();
+			document.getElementById("zf").addEventListener("tap",function(){
+				window.location.href="wish.html";
+			})
+			document.getElementById("hy").addEventListener("tap",function(){
+				window.location.href="index.html";
+			})
+			document.getElementById("sg").addEventListener("tap",function(){
+				window.location.href="time.html";
+			})
+		</script>
+	</body>
+
+</html>

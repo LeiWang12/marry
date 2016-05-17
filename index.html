@@ -21,24 +21,34 @@
 		</header>
 		<footer class="ui-footer ui-footer-btn">
 			<ul class="ui-tiled ui-border-t">
-				<li data-href="" class="ui-border-r">
+				<li id="hy" class="ui-border-r">
 					<div>合影</div>
 				</li>
-				<li data-href="" class="ui-border-r">
+				<li id="sg" class="ui-border-r">
 					<div>时光</div>
 				</li>
-				<li data-href="">
-					<div>祝福</div>
+				<li id="zf">
+					<div >祝福</div>
 				</li>
 			</ul>
 		</footer>
-		<iframe src="photos.html" height="600px" width="100%" scrolling="no" frameborder="0"></iframe>
+		<iframe id="main" src="photos.html" height="600" width="100%" scrolling="no" frameborder="0"></iframe>
+			
 		<!-- /.ui-container-->
 
 		<!--<script src="js/digit.js"></script>
 		<script src="js/countdown.js"></script>-->
 		<script>
-			
+			var iFrame = document.getElementById("main");
+			document.getElementById("zf").addEventListener("click",function(){
+				window.location.href="wish.html";
+			})
+			document.getElementById("hy").addEventListener("click",function(){
+				iFrame.src="photos.html";
+			})
+			document.getElementById("sg").addEventListener("click",function(){
+				iFrame.src="time.html";
+			})
 		</script>
 	</body>
 
